@@ -1,0 +1,145 @@
+/* Стандартные стили */
+body {
+    background-color: #f0e4d7;
+    color: #5b4f3e;
+    font-family: 'Georgia', serif;
+}
+
+header {
+    font-family: 'Georgia', serif;
+    font-size: 3rem;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    margin-bottom: 30px;
+    background: linear-gradient(45deg, #ff6347, #f5a623);
+    border-bottom: 5px solid #ff6347;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.accordion-button {
+    background-color: #f5a623;
+    color: #fff;
+    border: none;
+    font-size: 1.1rem;
+}
+
+.accordion-button:hover {
+    background-color: #d87c2d;
+}
+
+.accordion-item {
+    background-color: #fff5e1;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.poster-img { 
+    width: 300px;
+    height: auto;
+    border: 8px solid #ffb72e;
+    transition: transform 0.3s ease;
+}
+
+.description h3 {
+    font-size: 1.6rem;
+    color: #ff6347;
+}
+
+.description {
+    max-width: 600px;
+}
+
+.carousel-arrows button {
+    color: rgb(0, 0, 0);
+    transition: background-color 0.3s ease;
+}
+
+.carousel-arrows button:hover {
+    color: #d87c2d;
+    transition: color 0.3s ease;
+}
+
+.carousel-controls button {
+    width: 100px;
+}
+
+/* Стилизация для стрелочек */
+.carousel-control-arrow {
+    background: none;
+    border: none;
+    color: #333;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.carousel-control-arrow:focus {
+    outline: none;
+}
+
+.carousel-arrows {
+    position: relative;
+    bottom: 0;
+}
+
+/* Адаптивные стили */
+@media (max-width: 768px) {
+    .poster-img {
+        width: 200px; /* Уменьшаем размер изображений на маленьких экранах */
+    }
+
+    .description {
+        max-width: 500px; /* Сужаем описание */
+    }
+
+    .carousel-control-arrow {
+        font-size: 18px; /* Уменьшаем размер стрелочек */
+    }
+}
+
+@media (max-width: 480px) {
+    .poster-img {
+        width: 150px; /* Ещё больше уменьшаем изображения на маленьких экранах */
+    }
+
+    .description {
+        max-width: 400px; /* Уменьшаем ширину описания */
+    }
+
+    .carousel-control-arrow {
+        font-size: 16px; /* Меньше стрелочки на мобильных */
+    }
+
+    .carousel-arrows {
+        display: flex;
+        justify-content: space-between; /* Располагаем стрелки по бокам */
+        width: 100%;
+    }
+}
+
+@media (max-width: 320px) {
+    header {
+        font-size: 2rem; /* Уменьшаем размер заголовка для экранов 320px */
+        padding: 10px; /* Уменьшаем паддинг */
+    }
+
+    .poster-img {
+        width: 120px; /* Делаем изображения еще меньше */
+    }
+
+    .description {
+        max-width: 350px; /* Уменьшаем описание */
+    }
+
+    .accordion-button {
+        font-size: 1rem; /* Уменьшаем шрифт кнопки аккордеона */
+    }
+
+    .carousel-control-arrow {
+        font-size: 14px; /* Уменьшаем стрелки */
+    }
+
+    .carousel-arrows {
+        width: 90%; /* Уменьшаем ширину блока стрелок */
+    }
+}
